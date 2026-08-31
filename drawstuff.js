@@ -514,11 +514,11 @@ function main() {
     var imagedata = context.createImageData(w,h);
     
     // define polygon and view
-    var testEye = new Vector(1,1,1);
+    var testEye = new Vector(0,0,0);
     var testAt = Vector.subtract(new Vector(0,0,10),testEye);
     var view = {eye:testEye, at:testAt, up:new Vector(0,1,0)};
-    var poly = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, {x:5,y:5,z:10,c:new Color(0,255,0,255)}, 
-                {x:-10,y:0,z:10,c:new Color(0,0,0,255)}, {x:10,y:0,z:10,c:new Color(0,0,255,255)}];
+    var poly = [{x:-7.071,y:0,z:10,c:new Color(255,0,0,255)}, {x:0,y:0.7071,z:10,c:new Color(0,255,0,255)}, 
+                {x:0.7071,y:0,z:10,c:new Color(0,0,0,255)}, {x:0,y:-0.7071,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
